@@ -1,0 +1,81 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/styles.css">
+    <title>Freaky Fashion</title>
+  </head>
+
+  <body>
+    <header>
+      <div id="logo">
+        <a href=""><img src="https://via.placeholder.com/220x120.png/63f7db/808080%20?text=EC+Shop" alt="ECUtbildning"></a>
+      </div>
+      
+      <nav>
+        <form>
+          <input type="text" placeholder="sök produkt">
+        </form>
+        
+        <a href="./index.html">products</a>
+        <a href="./new-product.html">new product</a>
+      </nav>
+
+      <div id="list">
+        <ul>
+          <li>Nyheter</li>
+          <li>Produktkategorier</li>
+          <li>Second hand</li>
+          <li>topplistan</li>
+          <li>skor & väskor</li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="produkter new-product">
+        <h1>New product</h1>
+
+        <form>
+          <label for="name">Name:</label>
+          <input id="name" name="name" type="text" placeholder="Eter name">
+
+          <label for="description">Enter description</label>
+          <textarea id="description" name="description" cols="50" rows="10" placeholder="Enter description"></textarea>
+
+          <label for="image">Image:</label>
+          <input id="image" name="image" type="file" accept="image/png, image/jpeg, image/jpg">
+
+          <label for="article-number">Enter article number</label>
+          <input id="article-number" type="text" maxlength="8" min="0" max="9">
+
+          <label for="price">Price:</label>
+          <input id="price" name="price" type="number">
+
+          <label for="publish-date">Publish date:</label>
+          <input type="date" name="publish-date" id="publish-date">
+
+          <label for="category">Category:</label>
+          <select id="category" name="category" multiple size="5">
+            <option value="dresses">dresses</option>
+            <option value="sweaters">sweaters</option>
+            <option value="shoes">shoes</option>
+            <option value="jeans">jeans</option>
+            <option value="shorts">shorts</option>
+            <option value="underware">underware</option>
+            <option value="jackets">jackets</option>
+          </select>
+          <button>Add</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        <h3>Prenumerera på vårt nyhetsbrev</h3>
+        <input type="text" placeholder="ange din e-postadress">
+      </div>
+    </footer>
+  </body>
+</html>
