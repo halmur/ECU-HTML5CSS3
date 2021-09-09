@@ -1,0 +1,29 @@
+body{ 
+    height: 2000px;
+}
+.container {
+    border: 1px solid;
+}
+    /* .box {
+        position: absolute;
+        top: 50px;
+        height: 100px;
+        width: 100px;
+        padding: 20px;
+        border: 1px solid;
+        box-sizing: border-box;
+        background-color: limegreen;
+    } */
+
+    .box1, .box2 {
+        position: absolute;
+        height: 100px;
+        width: 100px;
+    }
+    .box1 {
+        background-color: lightblue;
+    }
+    .box2 {
+        top: 50px;
+        background-color: lightgreen;
+    }
