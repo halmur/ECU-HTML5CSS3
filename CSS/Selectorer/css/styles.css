@@ -1,0 +1,82 @@
+body{
+    margin: 0;
+}
+    /*1 Ta fram selector som väljer ut samtliga <h1> på sidan */
+    h1 {
+       color: limegreen;
+       font-size: 3em;
+    }
+
+    /*2 Ta fram selector som väljer ut samtliga <h1> OCH <p> på sidan: */
+    h1, p {
+       color: limegreen;
+       font-size: 3em;
+    }
+
+    /*3 Ta fram selector som väljer ut samtliga <header> som ligger någonstans under <main>: */
+    main header {
+       color: limegreen;
+       font-size: 2em;
+    }
+
+    /*4 Ta fram selector som väljer ut <h1> som ligger direkt under <header>, där sistnämnda har klassnamn "site-header": */
+    .site-header h1 {
+        color: limegreen;
+        font-size: 2em;
+    }
+
+    
+    /*5 Ta fram selector som väljer ut samtliga <header> som INTE har klassnamn "site-header": */
+    header:not(.site-header) {
+        color: limegreen;
+        font-size: 2em;
+    }
+
+    /*6 Ta fram selector som väljer element som har id har värdet "search": */
+    #search {
+        color: limegreen;
+        font-size: 2em;
+    }
+
+    /*7 Ta fram selector som väljer <input> där "type" har värdet "search": */
+    input[type=text] {
+        color: limegreen;
+        font-size: 2em;
+    }
+
+
+    /*8 Ta fram selector som väljer första <li> under <header>, där sistnämnda har klassnamn "site-header": */
+    .site-header li:first-child{
+        color: hotpink;
+        font-size: 2em;
+    }
+
+    /*9 Ta fram selector som väljer sista <li> i listan under <header>, där sistnämnda har klassnamn "site-header": */
+    .site-header li:last-child{
+        color: #f0f;
+        font-size: 2em;
+    }
+
+    /*10 Ta fram selector som väljer varannan jämn <li> i listan (inte första <li>, men andra, inte tredje, men fjärde, etc.),  under <header>, där sistnämnda har klassnamn "site-header": */
+    .site-header li:nth-child(even){
+        color: #fea;
+        font-size: 2em;
+    }
+
+    /*11 Ta fram selector som väljer varannan ojämn <li> i listan (första, men inte andra, tredje, men inte fjärde, etc.),  under <header>, där sistnämnda har klassnamn "site-header": */
+    .site-header li:nth-child(odd){
+        color: limegreen;
+        font-size: 2em;
+    }
+
+    /*12 Ta fram selector som väljer 3dje <li> (bara 3dje - inte var 3dje) i listan,  under <header>, där sistnämnda har klassnamn "site-header": */
+    .site-header li:nth-child(3){
+        color: orange;
+        font-size: 2em;
+    }
+
+    /*14 Ta fram selector som väljer ut samtliga element på sidan: */
+    * {
+        color: darkseagreen;
+        font-size: 2em;
+    }
