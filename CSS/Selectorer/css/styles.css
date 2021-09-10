@@ -20,12 +20,30 @@ body{
     }
 
     /*4 Ta fram selector som väljer ut <h1> som ligger direkt under <header>, där sistnämnda har klassnamn "site-header": */
+    /* väljer alla h1 element som ligger någonstans under .site-header class */
     .site-header h1 {
         color: limegreen;
         font-size: 2em;
     }
+    /* väljer den första h1 elementet under header elemented med .site-header class */
+    .site-header > h1 {
+        color: limegreen;
+        font-size: 2em;
+    }
+    /* välj ut samtliga h1 som ligger direkt under som ligger direkt under (barn, ej barnbarn etc.) header där
+    sistnämnda har klassnamnet "site-header" */
+    header.site-header > h1 {
+        color: limegreen;
+        font-size: 2em;
+    }
 
-    
+    /* sibling combinator (direct anslutande syskon) välj ut <h1> som ligger som syskon till <header>, alltså på samma nivå, direkt efter */
+    header.site-header + h1 {
+        color: limegreen;
+        font-size: 2em;
+    }
+
+
     /*5 Ta fram selector som väljer ut samtliga <header> som INTE har klassnamn "site-header": */
     header:not(.site-header) {
         color: limegreen;
@@ -39,7 +57,7 @@ body{
     }
 
     /*7 Ta fram selector som väljer <input> där "type" har värdet "search": */
-    input[type=text] {
+    input[type=search] {
         color: limegreen;
         font-size: 2em;
     }
@@ -50,6 +68,10 @@ body{
         color: hotpink;
         font-size: 2em;
     }
+    .site-header li:nth-of-type(1) {
+        color: red;
+        font-size: 2em;
+      }
 
     /*9 Ta fram selector som väljer sista <li> i listan under <header>, där sistnämnda har klassnamn "site-header": */
     .site-header li:last-child{
@@ -59,24 +81,283 @@ body{
 
     /*10 Ta fram selector som väljer varannan jämn <li> i listan (inte första <li>, men andra, inte tredje, men fjärde, etc.),  under <header>, där sistnämnda har klassnamn "site-header": */
     .site-header li:nth-child(even){
-        color: #fea;
+        color: #dff;
         font-size: 2em;
     }
+    /* .site-header li:nth-of-type(2n){
+        color: limegreen;
+        font-size: 2em;
+    } */
 
     /*11 Ta fram selector som väljer varannan ojämn <li> i listan (första, men inte andra, tredje, men inte fjärde, etc.),  under <header>, där sistnämnda har klassnamn "site-header": */
     .site-header li:nth-child(odd){
         color: limegreen;
         font-size: 2em;
     }
+    /* .site-header li:nth-of-type(2n+1){
+        color: hotpink;
+        font-size: 2em;
+    } */
 
     /*12 Ta fram selector som väljer 3dje <li> (bara 3dje - inte var 3dje) i listan,  under <header>, där sistnämnda har klassnamn "site-header": */
-    .site-header li:nth-child(3){
+    /* .site-header li:nth-child(3){
         color: orange;
         font-size: 2em;
-    }
+    } */
 
     /*14 Ta fram selector som väljer ut samtliga element på sidan: */
-    * {
+    /* * {
         color: darkseagreen;
         font-size: 2em;
-    }
+    } */
+
+
+
+
+
+
+
+
+
+
+
+
+/* Från Roberts föreläsning vscode */
+    /* UPPGIFT 1 */
+/*
+samtliga <h1>
+h1 {
+  color: limegreen;
+  font-size: 3em;
+} */
+
+/* UPPGIFT 2 */
+/*
+samtliga <h1> OCH <p>
+h1, p {
+  color: limegreen;
+  font-size: 3em;
+} */
+
+/* UPPGIFT 3 */
+/*
+alla <header> som ligger någonstans under <article> (barn, barnbarn, etc.)
+där <article> ligger någonstans under <main> (barn, barnbarn, etc.)
+*/
+/* main article header {
+  color: limegreen;
+  font-size: 3em;
+}  */
+
+/*
+alla <header> som ligger direkt under <article> (barn, och ej barnbarn, etc.)
+där <article> ligger någonstans under <main> (barn, barnbarn, etc.)
+*/
+/* main article > header {
+  color: limegreen;
+  font-size: 3em;
+}  */
+
+/*
+alla <header> som ligger direkt under <article> (enbart barn, ej barnban, etc.)
+där <article> ligger direkt under <main> (enbart barn, ej barnbarn, etc.)
+main > article > header {
+  color: limegreen;
+  font-size: 3em;
+} */
+
+/* UPPGIFT 4 */
+
+/*
+Välj samtliga <h1> som ligger direkt under (dvs. barn, ej barnbarn, etc.)
+ett element som har klassen "site-header"
+.site-header > h1 {
+  color: limegreen;
+  font-size: 3em;
+}*/
+
+/*
+Välj samtliga <h1> som ligger någonstans (barn, barnbarn, etc.) under
+ett element, som har klassnamnet "site-header".
+*/
+ /* .site-header h1 {
+  color: limegreen;
+  font-size: 3em;
+}  */
+
+/*
+ Välj ut samtliga <h1> som ligger direkt under som ligger direkt
+ under (barn, ej barnbarn etc.) <header> där sistnämnda
+ har klassnamnet "site-header.
+header.site-header > h1 {
+  color: limegreen;
+  font-size: 2em;
+}*/
+
+/* sibling combinator (direct anslutande syskon)
+välj ut <h1> som ligger som syskon till <header>, alltså
+på samma nivå, direkt efter
+header.site-header + h1 {
+  color: limegreen;
+  font-size: 2em;
+}
+*/
+
+/* UPPGIFT 5
+
+Välj ut samtliga <header> som INTE har klassnamnet "site-header".
+
+header:not(.site-header) {
+  color: limegreen;
+  font-size: 2em;
+}
+*/
+
+/* UPPGIFT 6
+Välj ut element där "id" är satt till "search". notera att
+id ska vara unikt på sidan - använd class först och främst, om
+du inte nödvändigtvis behöver använda id (t.ex. <label for="">
+<a href="#aboutus">Om oss</a>   ->    <h1 id="aboutus">
+
+#search {
+  color: limegreen;
+  font-size: 2em;
+}*/
+
+/*
+  Uppgift 7
+  Välj ut <input> där attriutet "type" har värdet "search"
+*/
+/*input[type="search"] {
+  color: limegreen;
+  font-size: 2em;
+}*/
+
+/* Uppgift 8
+  Välj ut första barnet (bland syskon), som ligger någonstans
+  under ett element som har klassen "site-header"
+.site-header li:first-child {
+  color: limegreen;
+  font-size: 2em;
+}*/
+
+
+/*
+ Första element av typ <li> som ligger under en <ul>,
+ som i sin tur ligger under en nav, som i sin tur ligger
+ under ett element som har klassen "site-header"
+*/
+/* .site-header nav ul li:first-of-type {
+  color: limegreen;
+  font-size: 3em;
+} */
+
+/*
+ Första barnet typ <li> som ligger under en <header>
+som har klassen "site-header"
+*/
+/*header.site-header li:first-child {
+  color: limegreen;
+  font-size: 2em;
+}*/
+
+/*
+Första barnet av typ <li> som ligger någonstans under
+<header> (barn, barnbarn, etc.) som i sin tur ligger någotstans
+under ett element som har klassnamnet "site-header"
+.site-header header li:first-child {
+  color: limegreen;
+  font-size: 2em;
+}*/
+
+/* Uppgift 9 */
+
+/*  Sista <li> i lista av element, som ligger någonstans under
+  ett element som har klassnamnet .site-header
+.site-header li:last-child {
+  color: limegreen;
+  font-size: 3em;
+}*/
+
+/*
+  Välj ut sista <li> som finns som barn någonstans under
+  ett element som har klassnamnet "site-header".
+  <header class="site-header"
+.site-header li:last-of-type {
+  color: limegreen;
+  font-size: 2em;
+}*/
+
+/* Uppgift 10 */
+
+/*
+ Välj ut vartannan jämn <li> som ligger någonstans under
+ ett element som har klassnamnet "site-header"
+.site-header li:nth-child(even) {
+  color: limegreen;
+  font-size: 3em;
+}*/
+
+/*
+ Välj ut vartannan <li> som ligger någonstans under
+ en <header> som har klassnamnet "site-header"
+
+header.site-header li:nth-child(even) {
+  color: limegreen;
+  font-size: 2em;
+}
+*/
+
+/*
+Välj ut vartannan <li>, i hela dokumentet.
+*/
+/* li:nth-child(even){
+  color: limegreen;
+  font-size: 2em;
+} */
+
+/*
+Välj ut den andra förekomsten av <li> (i en lista / barn av <li>)
+som ligger någonstans under ett element som har klassnamnet "site-header".
+*/
+/* .site-header li:nth-of-type(2n) {
+  color: limegreen;
+  font-size: 2em;
+} */
+
+/* Uppgift 10 */
+/*
+ Välj ut vartannan ojämn <li> som ligger någonstans under
+ ett element som har klassnamnet "site-header"
+*/
+/* .site-header li:nth-child(odd) {
+  color: lightpink;
+  font-size: 2em;
+} */
+
+/*
+ Välj ut vartannan ojämn <li> som ligger någonstans under
+ ett element som har klassnamnet "site-header"
+*/
+/* .site-header li:nth-child(2n+1){
+  color: hotpink;
+  font-size: 2em;
+} */
+
+/*
+Uppgift 12
+*/
+/*
+Välj ut den tredje <li> i en lista av barn, där denna/dessa
+ligger någonstans under ett element som har klassnamn
+"site-header"
+.site-header li:nth-child(3) {
+  color: peru;
+  font-size: 2em;
+}
+
+* {
+  color: peru;
+  font-size: 2em;
+}
+*/
