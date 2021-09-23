@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+}
+
+main {
+  margin: 0 15px;
+}
+
+/* click & collect */
+.callout {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: .7em;
+}
+
+/* site header */
+
+.site-header {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid black;
+  margin: 0 15px;
+}
+
+.site-header > * {
+  flex-grow: 1;
+  
+}
+
+.site-header ul.icons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-header ul.icons li {
+  display: inline;
+}
+
+.site-header > *:first-child, 
+.site-header > *:last-child {
+  flex-grow: 0;
+}
+
+.site-header input[type="search"] {
+  width: 100%;
+}
+
+.site-header form {
+  margin: 0 10px;
+}
+
+/* hero */
+
+.hero h1 {
+  font-size: 1.1em;
+}
