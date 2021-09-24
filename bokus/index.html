@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bokus</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="callout">
+        5% rabatt till alla studenter. Använd kod HEJPLUGG21.
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">
+            <span>fokus</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Startsida</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Nyheter</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Toplistor</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Erbjudanden</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div
+        id="hero"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-interval="0"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#hero"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#hero"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#hero"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="https://via.placeholder.com/800x350.png?text=Slide+1"
+              class="d-block w-100"
+              alt=""
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://via.placeholder.com/800x350.png?text=Slide+2"
+              class="d-block w-100"
+              alt=""
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="https://via.placeholder.com/800x350.png?text=Slide+3"
+              class="d-block w-100"
+              alt=""
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#hero"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#hero"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+<div class="container">
+
+
+      <article class="current-books">
+        <header>
+          <h2>Aktuella böcker</h2>
+        </header>
+        <div class="row">
+            <!--
+                col-6
+                    ta upp 6 virtuella kolumner (av 12)
+                    så länge vi har en viewport som är max 767 px bred
+                col-md-4
+                    ta upp 4 virtuella kolumner (av 12)
+                    så länge vi har en viewport som ligger mellan 768 px 
+                    och 1199 px bred
+                col-xl-3
+                    ta upp 3 virtuella kolumner (av 12)
+                    så länge vi har en viewport som är 1200 px bred eller större
+
+            -->
+            <div class="col-6 col-md-4 col-xl-3">
+                <img src="https://via.placeholder.com/200x300.png?text=Cover" alt="">
+                <span class="title">Lorem ipsum dolor</span>
+                <span class="author">John Doe</span>
+                <span class="price">229 kr</span>
+                <button class="btn btn-primary w-100">Köp</button>
+            </div>
+            <div class="col-6 col-md-4 col-xl-3">
+                <img src="https://via.placeholder.com/200x300.png?text=Cover" alt="">
+                <span class="title">Lorem ipsum dolor</span>
+                <span class="author">John Doe</span>
+                <span class="price">229 kr</span>
+                <button class="btn btn-primary w-100">Köp</button>
+            </div>
+            <div class="col-6 col-md-4 col-xl-3">
+                <img src="https://via.placeholder.com/200x300.png?text=Cover" alt="">
+                <span class="title">Lorem ipsum dolor</span>
+                <span class="author">John Doe</span>
+                <span class="price">229 kr</span>
+                <button class="btn btn-primary w-100">Köp</button>
+            </div>
+            <div class="col-6 col-md-4 col-xl-3">
+                <img src="https://via.placeholder.com/200x300.png?text=Cover" alt="">
+                <span class="title">Lorem ipsum dolor</span>
+                <span class="author">John Doe</span>
+                <span class="price">229 kr</span>
+                <button class="btn btn-primary w-100">Köp</button>
+            </div>
+            <div class="col-6 col-md-4 col-xl-3">
+                <img src="https://via.placeholder.com/200x300.png?text=Cover" alt="">
+                <span class="title">Lorem ipsum dolor</span>
+                <span class="author">John Doe</span>
+                <span class="price">229 kr</span>
+                <button class="btn btn-primary w-100">Köp</button>
+            </div>
+            <div class="col-6 col-md-4 col-xl-3">
+                <img src="https://via.placeholder.com/200x300.png?text=Cover" alt="">
+                <span class="title">Lorem ipsum dolor</span>
+                <span class="author">John Doe</span>
+                <span class="price">229 kr</span>
+                <button class="btn btn-primary w-100">Köp</button>
+            </div>
+        </div>
+      </article>
+    </main>
+
+</div>
+
+  </body>
+</html>
