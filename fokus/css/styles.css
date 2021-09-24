@@ -1,0 +1,48 @@
+.callout {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+.site-header .navbar-brand span {
+  display: inline-block;
+  height: 62px;
+  width: 224px;
+  font-size: 2em;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: burlywood;
+  text-shadow: 1px 1px 2px black;
+}
+
+/* Hero */
+#hero {
+  margin-bottom: 20px;
+}
+
+/* Current books */
+
+.current-books h2 {
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.current-books .title,
+.current-books .author,
+.current-books .price {
+  display: block;
+}
+
+
+.current-books .title,
+.current-books .price {
+  font-weight: bold;
+}
+
+.current-books .author {
+  font-size: .8em;
+}
+
+.current-books img {
+  width: 100%;
+}
