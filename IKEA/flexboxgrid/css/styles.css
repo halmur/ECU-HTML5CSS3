@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+}
+
+main {
+    margin: 0 15px;
+}
+
+/* Callout */
+.callout {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: .7em;
+}
+
+/* Site header */
+.site-header {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid black;
+    margin: 0 15px;
+}
+
+.site-header > * {
+    flex-grow: 1;
+    border: 1px dashed black;
+}
+
+.site-header ul.icons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-header ul.icons li {
+    display: inline;
+}
+
+.site-header > *:first-child, 
+.site-header > *:last-child {
+    flex-grow: 0;
+}
+
+.site-header input[type="search"] {
+    width: 100%;
+}
+
+.site-header form {
+    margin: 0 10px;
+}
+
+/* Hero */
+.hero h1 {
+    font-size: 1.1em;
+}
+
+.hero > div {
+    display: grid;
+    gap: 5px;
+    grid-template-areas: 
+        "first first"
+        "second third"
+}
+
+.hero > div div:nth-child(1) {
+    grid-area: first;
+}
+
+.hero > div div:nth-child(2) {
+    grid-area: second;
+}
+
+.hero > div div:nth-child(3) {
+    grid-area: third;
+}
+
+.hero > div div {
+    border: 1px dashed black;
+}
+
+/* Advert */
+.advert {
+    display: none;
+    border: 1px dashed black;
+    margin: 10px 0;
+}
+
+/* Popular products */
+.popular-products > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+.popular-products > div div {
+    border: 1px dashed black;
+}
+
+/* Site footer */
+.site-footer .social-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-footer .social-links li {
+    margin-left: 8px;
+}
+
+.site-footer nav {
+    display: none;
+}
+
+/**********************************************************
+                    Breakpoint 576 px
+**********************************************************/
+
+@media screen and (min-width: 576px) {
+    
+    /* Hero */
+    .hero > div {
+        grid-template-areas: 
+            "first second"
+            "first third"
+    }
+
+    /* Advert */
+    .advert {
+        display: block;
+    }
+
+    /* Popular products */
+    .popular-products > div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    /* Site footer */
+    .site-footer .accordion {
+        display: none;
+    }
+    
+    .site-footer nav {
+        display: flex;
+    }
+}
