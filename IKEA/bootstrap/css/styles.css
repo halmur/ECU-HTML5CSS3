@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+}
+
+main {
+    margin: 0 15px;
+}
+
+/* Callout */
+.callout {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: .7em;
+}
+
+/* Site header */
+
+.site-header ul.icons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-header ul.icons li {
+    display: inline;
+}
+
+.site-header input[type="search"] {
+    width: 100%;
+}
+
+/* Hero */
+
+.hero h1 {
+    font-size: 1.1em;
+}
+
+.hero > div div {
+    border: 1px dashed black;
+}
+
+/* Advert */
+.advert {
+    border: 1px dashed black;
+    margin: 10px 0;
+}
+
+/* Popular products */
+
+.popular-products > div div {
+    border: 1px dashed black;
+}
+
+/* Site footer */
+.site-footer .social-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-footer .social-links li {
+    display: inline;
+    margin-left: 8px;
+}
